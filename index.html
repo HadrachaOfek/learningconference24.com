@@ -35,31 +35,35 @@
             padding: 0; /* Remove default padding */
         }
 
+        /* Common icon styling */
         .icon-container {
             position: absolute;
             display: flex;
             gap: 15px; /* Increased space between icons */
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
         }
 
         .icon-link {
             display: block;
         }
 
-        .icon {
-            width: 60px; /* Adjust the size of the icon */
-            max-width: 60px; /* Ensure icon fits within the available space */
+        /* Specific styling for icons 1, 2, 3 */
+        .small-icon {
+            width: 60px; /* Size of the small icons */
             height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure icon fits within the available space */
         }
 
         /* Center icon for image 6 */
-        .center-icon {
+        .center-icon-container {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%); /* Center the icon */
+        }
+
+        .large-icon {
+            width: 150px; /* Larger size for the centered icon */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure icon fits within the available space */
         }
 
         /* Position icons for image 7 */
@@ -88,9 +92,9 @@
         </div>
         <div class="image-container">
             <img id="image6" alt="Image 6">
-            <div class="icon-container center-icon">
+            <div class="icon-container center-icon-container">
                 <a href="https://docs.google.com/spreadsheets/d/1H18-xXz4hFw0vQteLn-F9HKPeZ1vdHV8/edit?usp=sharing&ouid=113635606421363191145&rtpof=true&sd=true" class="icon-link">
-                    <img src="icon.png" alt="Excel Icon" class="icon">
+                    <img src="icon.png" alt="Excel Icon" class="large-icon">
                 </a>
             </div>
         </div>
@@ -98,13 +102,13 @@
             <img id="image7" alt="Image 7">
             <div class="icon-container bottom-icons">
                 <a href="https://waze.com/ul/hsvbftk7s5" class="icon-link">
-                    <img src="icon1.png" alt="Icon 1" class="icon">
+                    <img src="icon1.png" alt="Icon 1" class="small-icon">
                 </a>
                 <a href="https://maps.app.goo.gl/wKxReFgysEQhyN9P6?g_st=iw" class="icon-link">
-                    <img src="icon2.png" alt="Icon 2" class="icon">
+                    <img src="icon2.png" alt="Icon 2" class="small-icon">
                 </a>
                 <a href="https://support.google.com/maps/answer/6291838?hl=iw&co=GENIE.Platform%3DAndroid&sjid=5991357220991482740-EU" class="icon-link">
-                    <img src="icon3.png" alt="Icon 3" class="icon">
+                    <img src="icon3.png" alt="Icon 3" class="small-icon">
                 </a>
             </div>
         </div>
