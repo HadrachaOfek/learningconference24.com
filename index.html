@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iaf learning conference 2024</title>
+    <title>Iaf Learning Conference 2024</title>
     <style>
         body, html {
             margin: 0;
@@ -23,6 +23,7 @@
             height: 100vh; /* Full screen height */
             margin: 0; /* Remove any potential margin */
             padding: 0; /* Remove any potential padding */
+            position: relative; /* Allow absolute positioning of children */
         }
 
         img {
@@ -32,6 +33,35 @@
             display: block; /* Prevents any inline spacing */
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
+        }
+
+        .icon-container {
+            position: absolute;
+            display: flex;
+            gap: 15px; /* Increased space between icons */
+        }
+
+        .icon-link {
+            display: block;
+        }
+
+        .icon {
+            width: 60px; /* Increased size of the icon */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure icon fits within the available space */
+        }
+
+        /* Center icon for image 6 */
+        .center-icon {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the icon */
+        }
+
+        /* Position icons for image 7 */
+        .bottom-icons {
+            bottom: 20px; /* Distance from the bottom of the image */
+            right: 20px; /* Distance from the right side of the image */
         }
     </style>
 </head>
@@ -54,15 +84,25 @@
         </div>
         <div class="image-container">
             <img id="image6" alt="Image 6">
+            <div class="icon-container center-icon">
+                <a href="https://docs.google.com/spreadsheets/d/1H18-xXz4hFw0vQteLn-F9HKPeZ1vdHV8/edit?usp=sharing&ouid=113635606421363191145&rtpof=true&sd=true" class="icon-link">
+                    <img src="icon.png" alt="Excel Icon" class="icon">
+                </a>
+            </div>
         </div>
         <div class="image-container">
             <img id="image7" alt="Image 7">
-        </div>
-        <div class="image-container">
-            <img id="image8" alt="Image 8">
-        </div>
-        <div class="image-container">
-            <img id="image9" alt="Image 9">
+            <div class="icon-container bottom-icons">
+                <a href="https://waze.com/ul/hsvbftk7s5" class="icon-link">
+                    <img src="icon1.png" alt="Icon 1" class="icon">
+                </a>
+                <a href="https://maps.app.goo.gl/wKxReFgysEQhyN9P6?g_st=iw" class="icon-link">
+                    <img src="icon2.png" alt="Icon 2" class="icon">
+                </a>
+                <a href="https://support.google.com/maps/answer/6291838?hl=iw&co=GENIE.Platform%3DAndroid&sjid=5991357220991482740-EU" class="icon-link">
+                    <img src="icon3.png" alt="Icon 3" class="icon">
+                </a>
+            </div>
         </div>
     </div>
 
@@ -79,8 +119,6 @@
             document.getElementById('image5').src = "mobile5.png";
             document.getElementById('image6').src = "mobile6.png";
             document.getElementById('image7').src = "mobile7.png";
-            document.getElementById('image8').src = "mobile8.png";
-            document.getElementById('image9').src = "mobile9.png";
         } else {
             // Desktop images
             document.getElementById('image1').src = "1.png";
@@ -90,8 +128,6 @@
             document.getElementById('image5').src = "5.png";
             document.getElementById('image6').src = "6.png";
             document.getElementById('image7').src = "7.png";
-            document.getElementById('image8').src = "8.png";
-            document.getElementById('image9').src = "9.png";
         }
     </script>
 </body>
